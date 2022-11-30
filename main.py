@@ -457,7 +457,7 @@ if __name__ == '__main__':
         except:
             graph_cache = {}
     
-        # let use choose search type
+        # let user choose search type
         search_type = input("How do you want to search for movies?\nEnter the number you want to search through -- 1: Genre, 2: Rating, 3: Voting: ")
         if search_type == '1':
             # get the genre list
