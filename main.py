@@ -562,7 +562,7 @@ if __name__ == '__main__':
                 display_tweets(tweets_content, graph)
             see_tweet = input("\nWould you like to see the tweets about other movies?\nReply the index of moive or 'all' to see. Reply 'no' to next step: ")
     
-        # let use choose if to start another search
+        # let user choose if to start another search
         new_search = input("\nWould you want to start a new search? (Y/N): ")
         while valid_YN(new_search) == "invalid":
             new_search = input("\nWould you want to start a new search? (Y/N): ")
