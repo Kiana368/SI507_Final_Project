@@ -48,7 +48,7 @@ In `process_data.py`, there are several classes and functions for constructing g
 - Class _Movie_: use the information of the movie to initialize an object of _Movie_. The details are stored in the attributes, such as _runtime_, _genres_, etc.
 - Class _Source_: the source node of the graph, has functions _addNeighbor()_, _getType()_, _getName()_ and _getConnections()_. 
 - Function _create_genre_source()_, _create_rating_source()_ and _create_voting_source()_: generate an instance of class _Source_ as the center node of the graph using the data stored in the database
-- Function _generate_graph()_: generate the graph by connecting the instances of class _Movie_ to the previous generated center node 
+- Function _generate_graph()_: generate a graph by connecting the instances of class _Movie_ to the previous generated center node 
 
 **Graph storage:**
 - `graph_cache.json`: JSON file contains detailed movie information stored in the graph structure. The graphs are created and cached according to the user input query
