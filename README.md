@@ -42,6 +42,7 @@ This project aims to build a movie searching system. Based on the genre, rating 
 All my data is stored as graph structures in separate JSON files from the different data source.
 
 **Construct graph:**
+
 In `process_data.py`, There are several classes and functions for constructing graphs.
 
 - Class _Movie_: use the information of the movie to initialize an object of _Movie_. The details are stored in the attributes, such as _runtime_, _genres_, etc.
