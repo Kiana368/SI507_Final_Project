@@ -12,17 +12,17 @@ This project aims to build a movie searching system. Based on the genre, rating 
     - Create and name your project
     - Save your keys & tokens
 
-**Steps before running the code: **
+**Steps before running the code:**
 
 - Replace the IMDB API key with your keys in access_data.py
 - Replace the Twitter keys & tokens in main.py
 - Run the 3 python files in order:
-  `python access_data.py`
-  `python store_data.py`
-  `python process_data.py`
+    `python access_data.py`
+    `python store_data.py`
+    `python process_data.py`
 
 
-**How to interact with this program: **
+**How to interact with this program:**
 
 - Run the file: `python main.py`
 - Enjoy the movie search by inputting your query and interactive option in the command-line tool
