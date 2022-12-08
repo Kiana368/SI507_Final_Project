@@ -27,10 +27,13 @@ This project aims to build a movie searching system. Based on the genre, rating 
 
 
 ## Required packages and software:
-
+Packages:
 - webbrowser
 - sqlite3
 - Plotly
 - tweepy
 - pandas
 - requests
+
+Software:
+- Chrome Web Browser
