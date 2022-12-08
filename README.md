@@ -1,4 +1,4 @@
-# SI507_Final_Project
+# SI507 Final Project
 
 ## Introduction & Instructions
 
