@@ -60,3 +60,11 @@ In `main.py`, the json of the graphs are read from the cache in the main functio
 
 - movie data: the json of the graphs which contains the movie data will be read from `graph_cache.json`. It will then be updated by adding a new graph if the user's query required.
 - tweet data: the json of the graphs which contains the tweet data will be read from `tweet_cache.json`. It will be updated by adding the tweets for a newly searched movie.
+
+## Interaction Instructions
+To interact with this program, just simply run the main.py after finishing all the steps before running as described in README. 
+1.	First, the program will ask users to enter the category they want to search through in the command window, choosing between “genres”, “ratings” and “votes”. 
+2.	According to the category user type in, the further selection options will be given. For example, if the user chooses “genres”, then a list of genre names will be printed and user will need to choose one. After choosing, the names of 5 movies will be presented.
+3.	The program will then ask users to choose which movie details to display and select between need spoiled content or not. After choosing, the detailed information of the selected movie will be presented in a HTML window opened in the browser. 
+4.	Then, user can choose which data visualization to display. The program will prompt four options for user to choose, three for plotting the comparison of runtime, IMDb rating, and votes, one for presenting the relevant tweets for these movies. The visualizations are all presented in HTML windows opened in the browser.
+5.	Finally, the program will ask if the users want to start a new search. If so, then go to Step 1 and repeat the workflow.
