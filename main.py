@@ -278,7 +278,9 @@ def display_plots(key, plot_name, id_list, graph):
     basic_layout = go.Layout(title=plot_name)
     fig = go.Figure(data=bar_data, layout=basic_layout)
 
-    fig.write_html('result/'+ plot_name + ".html", auto_open=True)
+    fig.write_html('result/'+ plot_name + ".html", auto_open=False)
+    chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
+    webbrowser.get(chrome_path).open("result/" + plot_name + ".html")
 
 
 def get_tweets(id_list, graph):
@@ -309,7 +311,7 @@ def get_tweets(id_list, graph):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token_key, access_token_secret)
     api = tweepy.API(auth)
-    
+
     # load cache
     try:
         tweet_file = open('data/tweet_cache.json', 'r')
@@ -317,7 +319,6 @@ def get_tweets(id_list, graph):
         tweet_file.close()
     except:
         tweet_cache = {}
-    
 
     # search for movie-related tweets
     tweet_content = {}
@@ -334,11 +335,11 @@ def get_tweets(id_list, graph):
                 if j not in tweet_content[movie_id]:
                     tweet_content[movie_id].append(j)
             tweet_cache[movie_id] = tweet_content[movie_id]
-    
+
     # update cache
     with open('data/tweet_cache.json', 'w+') as tweet_file:
         json.dump(tweet_cache, tweet_file, indent=4)
-    
+
     return tweet_content
 
 
@@ -457,7 +458,7 @@ if __name__ == '__main__':
         except:
             graph_cache = {}
     
-        # let user choose search type
+        # let use choose search type
         search_type = input("How do you want to search for movies?\nEnter the number you want to search through -- 1: Genre, 2: Rating, 3: Voting: ")
         if search_type == '1':
             # get the genre list
@@ -562,7 +563,7 @@ if __name__ == '__main__':
                 display_tweets(tweets_content, graph)
             see_tweet = input("\nWould you like to see the tweets about other movies?\nReply the index of moive or 'all' to see. Reply 'no' to next step: ")
     
-        # let user choose if to start another search
+        # let use choose if to start another search
         new_search = input("\nWould you want to start a new search? (Y/N): ")
         while valid_YN(new_search) == "invalid":
             new_search = input("\nWould you want to start a new search? (Y/N): ")
